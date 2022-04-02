@@ -1,0 +1,72 @@
+[
+  {
+    "id": "62469fc4e953eb116e9f8ef9",
+    "picture": "https://urlty.co/WZd",
+    "price": 1233,
+    "create": "Rachelle Herrera",
+    "coursename": "Learn Python: The Complete Python Programming Course"
+  },
+  {
+    "id": "62469fc47f0226e80e6a17b0",
+    "picture": "https://urlty.co/DEE",
+    "price": 695,
+    "create": "Snow Stone",
+    "coursename": "Learning Python for Data Analysis and Visualization"
+  },
+  {
+    "id": "62469fc4b94cbd51d3b28fb3",
+    "picture": "https://urlty.co/oIz",
+    "price": 3334,
+    "create": "Munoz Medina",
+    "coursename": "Python for Beginners - Learn Programming from scratch"
+  },
+  {
+    "id": "62469fc4aee56d11099ebdb2",
+    "picture": "https://urlty.co/bUd",
+    "price": 159,
+    "create": "Francis Woods",
+    "coursename": "Python Beyond the Basics - Object-Oriented Programming"
+  },
+  {
+    "id": "62469fc42d2502d14004236b",
+    "picture": "https://urlty.co/oIz",
+    "price": 1660,
+    "create": "Joyner Zamora",
+    "coursename": "Python Beyond the Basics - Object-Oriented Programming"
+  },
+  {
+    "id": "62469fc4e0ec65a3564ab8be",
+    "picture": "https://urlty.co/Ryo",
+    "price": 3399,
+    "create": "Patsy Hampton",
+    "coursename": "Python Beyond the Basics - Object-Oriented Programming"
+  },
+  {
+    "id": "62469fc4d2bd34e5dad20316",
+    "picture": "https://urlty.co/vUL",
+    "price": 4354,
+    "create": "Knox Jensen",
+    "coursename": "Spring & Hibernate for Beginners (includes Spring Boot)"
+  },
+  {
+    "id": "62469fc4f0aec754f1f43956",
+    "picture": "https://urlty.co/Ket",
+    "price": 2149,
+    "create": "Meghan Tyson",
+    "coursename": "Spring & Hibernate for Beginners (includes Spring Boot)"
+  },
+  {
+    "id": "62469fc4a0fb196383fcea2f",
+    "picture": "https://www.sociallykeeda.com/wp-content/uploads/2021/09/Python-Training-.jpg",
+    "price": 3290,
+    "create": "Stacy Bennett",
+    "coursename": "Yesenia Vega"
+  },
+  {
+    "id": "62469fc4a68cf8163697c20a",
+    "picture": "https://i.morioh.com/2020/01/16/f981ea4d5633.jpg",
+    "price": 1208,
+    "create": "Mckay Peck",
+    "coursename": "Spring & Hibernate for Beginners (includes Spring Boot)"
+  }
+]
