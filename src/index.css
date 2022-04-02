@@ -16,7 +16,7 @@ body {
 
 .menuList li::after {
   content: "";
-  width: 0;
+  width: 0px;
   height: 2px;
   background-color: #ec6c41;
   position: absolute;
