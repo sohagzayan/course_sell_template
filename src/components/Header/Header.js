@@ -1,12 +1,27 @@
-import { motion } from "framer-motion";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import logo from "../../assets/image/logoUdamy.png";
 import { useDataContext } from "../../context/GetDataContext";
 const Header = () => {
+  const navigate = useNavigate()
   const value = useDataContext();
   const { card, setCard } = value;
   const [headerScroll, setHeaderScroll] = useState(false);
+
+
+  useEffect(()=>{
+      Aos.init({duration : 3000})
+    },[])
+    
+    const goHomeNavigate =()=>{
+    navigate('/')
+
+  }
+
+
+
 
   const headerScrollColorChnage = () => {
     const scrolly = window.scrollY;
@@ -25,18 +40,14 @@ const Header = () => {
   }, []);
 
   return (
-    <motion.div
-      animate={headerScroll ? "" : { scale: 1 }}
-      transition={{ duration: 3 }}
-      className={
-        headerScroll
-          ? "  w-full  mx-auto  mt-3 sticky top-0  bg-secondary_white shadow-lg transition-all ease-linear duration-200 py-2 px-4"
-          : " transition-all ease-linear duration-150  w-full mx-auto container mt-3  transform scale-50 px-4"
+    <div   className={ headerScroll
+          ? " z-50  w-full  mx-auto  mt-3 sticky top-0  bg-secondary_white shadow-lg transition-all ease-linear duration-200 py-2 px-4"
+          : " z-50 transition-all ease-linear duration-150  w-full mx-auto container mt-3  transform  px-4"
       }
     >
       <div className=" flex justify-between items-center container mx-auto">
         <div className="w-32">
-          <img src={logo} alt="logo" />
+          <img className='cursor-pointer' onClick={goHomeNavigate} src={logo} alt="logo" />
         </div>
         <ul className="menuList flex items-center  gap-5 text-dark_blue font-semibold tracking-wider">
           <li className="">
@@ -76,7 +87,7 @@ const Header = () => {
           </li>
         </ul>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

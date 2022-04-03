@@ -12,7 +12,7 @@ const RoutesAll = () => {
         <Routes>
             <Route path='/' element={  <Home />}/>
             <Route path='/card' element={  <Card />}/>
-            <Route path='/feedback' element={  <Feedback />}/>
+            <Route path='/feedback/:id' element={  <Feedback />}/>
             <Route path='/*' element={  <NotFoundPage />}/>
         </Routes>
     );

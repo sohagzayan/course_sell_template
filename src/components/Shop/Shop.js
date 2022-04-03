@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDataContext } from '../../context/GetDataContext';
+import { StoreData } from '../../utlatis/StoreData';
 import ShopProduct from '../ShopProduct/ShopProduct';
 const Shop = () => {
     const [searchResult ,setSearchResult] = useState([])
@@ -11,7 +12,6 @@ const Shop = () => {
     const handleAddToCard = (item)=>{
         
         const exit =  card.find(product => product.id === item.id)
-        
         if(!exit){
             item.quentity = 1
             setCard([...card ,item])
@@ -21,8 +21,11 @@ const Shop = () => {
             const exit = card.filter(product => product.id !== item.id )
             setCard([...exit ,item])
         }
+        StoreData(item.id)
 
-    }   
+    } 
+    
+  
 
     const Result = products.filter(items => items.coursename.toLowerCase().includes(searchKeyWord.toLowerCase()))
 

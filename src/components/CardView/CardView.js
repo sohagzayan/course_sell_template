@@ -5,17 +5,22 @@ import { useDataContext } from '../../context/GetDataContext';
 
 
 
-
 const CardView = ({item ,totalPrice , setTotalPrice }) => {
+
+
     const [quentityValue , setQuentityValue] = useState(item.quentity)
     const {coursename ,create ,picture ,price ,quentity} = item
 
-    const {card , setCard} = useDataContext()
+    const {card , setCard } = useDataContext()
 
     const handleRemoveFormCard = (id)=>{
         const exit = card.filter(item => item.id !== id)
         setCard(exit)
+        
     }
+
+    
+
 
     const handleQuentityValue = (e)=>{
         e.target.value < 0 ? alert("nothind add nagative value ") : setQuentityValue(e.target.value)

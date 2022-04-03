@@ -2,6 +2,7 @@
 import CardView from "../components/CardView/CardView";
 import NotAddCardYet from "../components/Error/NotAddCardYet";
 import { useDataContext } from "../context/GetDataContext";
+import { removeFormLocalStorage } from "../utlatis/StoreData";
 
 
 const Card = () => {
@@ -16,13 +17,17 @@ const Card = () => {
         total = total + product.price * quentityTotal
     }
 
+    const handleResetAll = ()=>{
+      setCard([])
+      removeFormLocalStorage()
+    }
 
   return (
     <div>
       <div className=" md:px-0 px-4 flex w-full justify-around   flex-col-reverse md:flex-row  ">
         <ul className="w-7/7">
           <h2 className="text-2xl text-dark_blue font-semibold  mb-10 mt-10">
-            Shopping Cart <button onClick={()=> setCard([]) } className="text-light_tomato underline" href="/">Reset All</button>
+            Shopping Cart <button onClick={ handleResetAll } className="text-light_tomato underline" href="/">Reset All</button>
           </h2>
           {card.length > 0 ? (
             card.map((item) => <CardView   item={item} />)
