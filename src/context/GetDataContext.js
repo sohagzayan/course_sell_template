@@ -11,7 +11,7 @@ export const GetDataContext = ({children}) => {
 
     const [products ,setProducts] = useState([])
 
-
+    const [searchKeyWord , setSearchKeyWord] = useState('')
     const [card , setCard] = useState([])
 
     useEffect(()=>{
@@ -26,7 +26,7 @@ export const GetDataContext = ({children}) => {
 
 
     return (
-        <DataContext.Provider value={{products ,setProducts , card , setCard}}>
+        <DataContext.Provider value={{products ,setProducts , card , setCard,searchKeyWord , setSearchKeyWord}}>
                 {children}
         </DataContext.Provider>
     );
