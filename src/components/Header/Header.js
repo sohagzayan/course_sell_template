@@ -27,7 +27,7 @@ const Header = () => {
   },[])
 
   return (
-    <motion.div   animate={ headerScroll ?  '': {scale : 1}}  transition={{ duration:3 }} className={headerScroll ? "  w-full  mx-auto  mt-3 sticky top-0  bg-secondary_white shadow-lg transition-all ease-linear duration-200" : " transition-all ease-linear duration-150 duration-150 w-full mx-auto container mt-3  transform scale-50 "}>
+    <motion.div   animate={ headerScroll ?  '': {scale : 1}}  transition={{ duration:3 }} className={headerScroll ? "  w-full  mx-auto  mt-3 sticky top-0  bg-secondary_white shadow-lg transition-all ease-linear duration-200" : " transition-all ease-linear duration-150  w-full mx-auto container mt-3  transform scale-50 "}>
     <div className=' flex justify-between items-center container mx-auto'>
     <div className="w-32">
         <img src={logo} alt="logo" />

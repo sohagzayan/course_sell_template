@@ -19,7 +19,7 @@ const Card = () => {
 
   return (
     <div>
-      <div className=" md:px-0 px-4 flex w-full justify-around  flex-col flex-col-reverse md:flex-row  ">
+      <div className=" md:px-0 px-4 flex w-full justify-around   flex-col-reverse md:flex-row  ">
         <ul className="w-7/7">
           <h2 className="text-2xl text-dark_blue font-semibold  mb-10 mt-10">
             Shopping Cart <button onClick={()=> setCard([]) } className="text-light_tomato underline" href="/">Reset All</button>
