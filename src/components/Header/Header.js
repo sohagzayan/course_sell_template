@@ -1,7 +1,7 @@
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import React, { useEffect, useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../assets/image/logoUdamy.png";
 import { useDataContext } from "../../context/GetDataContext";
 const Header = () => {
@@ -9,6 +9,8 @@ const Header = () => {
   const value = useDataContext();
   const { card, setCard } = value;
   const [headerScroll, setHeaderScroll] = useState(false);
+  const location = useLocation()
+  console.log(location.pathname.includes('feedback'));
 
 
   useEffect(()=>{
@@ -27,10 +29,8 @@ const Header = () => {
     const scrolly = window.scrollY;
     console.log(scrolly);
     if (scrolly > 120) {
-      console.log("right time");
       setHeaderScroll(true);
     } else {
-      console.log("time not ");
       setHeaderScroll(false);
     }
   };
@@ -40,7 +40,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div   className={ headerScroll
+    <div style={{visibility : location.pathname.includes('feedback') ? 'hidden' : '' }}  className={ headerScroll
           ? " z-50  w-full  mx-auto  mt-3 sticky top-0  bg-secondary_white shadow-lg transition-all ease-linear duration-200 py-2 px-4"
           : " z-50 transition-all ease-linear duration-150  w-full mx-auto container mt-3  transform  px-4"
       }
