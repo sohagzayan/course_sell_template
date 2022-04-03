@@ -12,7 +12,7 @@ const ShopProduct = ({item , handleAddToCard}) => {
 
 
     return (
-        <div data-aos="fade-down"
+        <div data-aos="fade-up"
         data-aos-duration="2000" className='card bg-secondary_white shadow-md mb-5 flex justify-between flex-col'>
              <img src={picture} alt="image" />
              <div className='p-2'>
